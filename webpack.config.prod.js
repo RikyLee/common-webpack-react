@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpack = require('webpack');
 
 const extractTextPlugin = new ExtractTextPlugin({
     filename: "[name].[contenthash].css"
@@ -6,7 +7,18 @@ const extractTextPlugin = new ExtractTextPlugin({
 
 module.exports = {
     plugins: [
-        extractTextPlugin
+        extractTextPlugin,
+        new webpack.optimize.UglifyJsPlugin({
+            beautify: false,
+            mangle: {
+              screw_ie8: true,
+              keep_fnames: true
+            },
+            compress: {
+              screw_ie8: true
+            },
+            comments: false
+          })
     ],
     module: {
         rules: [
