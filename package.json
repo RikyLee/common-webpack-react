@@ -1,0 +1,45 @@
+{
+  "name": "react-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rikylee/common-webpack-react.git",
+  "author": "RikyLee <rikylee719@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js ",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.7.4",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.2.1",
+    "extract-css-chunks-webpack-plugin": "^4.7.1",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "terser-webpack-plugin": "^2.2.1",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
